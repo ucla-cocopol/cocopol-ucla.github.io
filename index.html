@@ -7,34 +7,33 @@
     <title>CoCoPol Lab</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="icon.png" sizes="32x32" />
+    <link rel="preload" as="image" href="lab_logo.png" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script>
 </head>
 <body>
     <header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav" id="myTopnav">
         <div class="container header-container">
             <img src="small_logo.png" alt="Lab Logo" class="header-logo">
-
-            <!-- Hamburger menu icon -->
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
             <nav class="navigation">
                 <a href="index.html">Home</a>
                 <a href="research.html">Research</a>
                 <a href="publications.html">Publications</a>
                 <a href="join.html">Join Us!</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
             </nav>
         </div>
+    </div>
     </header>
 
     <main class="container about">
 
         <br>
         <h1>
-        <img src="lab_logo.png" alt="Computational Cognitive Policy Lab Logo" style="width: 45%; height: auto;">
+        <img src="lab_logo.png" alt="Computational Cognitive Policy Lab Logo" class="lab-logo" style="width: 45%; height: auto;">
         </h1>
         
         <section id="about">
@@ -45,11 +44,14 @@
         </section>
 
     </main>
-    <!-- Add JavaScript here -->
     <script>
-        function toggleMenu() {
-            const navigation = document.querySelector('.navigation');
-            navigation.classList.toggle('active');
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
         }
     </script>
 
