@@ -1,0 +1,260 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #24292e;
+    margin: 0;
+    padding: 0;
+    /*background-color: #00001c;
+    color: #FFFFFF;*/
+}
+
+
+
+/* Ensure the container width adapts to smaller screens */
+.container {
+    width: 90%; /* Reduced for smaller screens */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.container.header-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center;
+}
+
+/* Logo size */
+.header-logo {
+    width: 130px;
+    height: auto;
+}
+
+/* Navigation styles */
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #24292e;
+    font-size: 18px;
+}
+
+/* Media query for smaller screens (below 768px) */
+@media (max-width: 768px) {
+    .container.header-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    .header-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        justify-content: center;
+        width: 100%; /* Ensure nav takes full width */
+    }
+
+    .navigation a {
+        font-size: 16px; /* Slightly smaller text */
+    }
+}
+
+/* Media query for very small screens (below 480px) */
+@media (max-width: 480px) {
+    .header-logo {
+        width: 100px; /* Smaller logo for mobile */
+    }
+
+    .navigation {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Smaller gap between links */
+    }
+
+    .navigation a {
+        font-size: 14px; /* Smaller font size for small screens */
+    }
+}
+
+.lab-name {
+    margin: 0;
+    font-size: 255%;
+}
+
+.navigation {
+    display: flex;
+    gap: 15px;
+    color:black;
+}
+
+.navigation a {
+/*    color: #FFFFFF;*/
+    text-decoration: none;
+    color:black;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.representative-pubs {
+    width: 100%; /* This makes the div take up 50% of the page width */
+    font-size: 85%;
+}
+
+.hero {
+    background-color: #00001c;
+    color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.about h1 {
+    font-size: 350%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 200%;
+    margin-bottom: 10px;
+}
+
+.about h3 {
+    font-size: 130%;
+    margin-bottom: 0px;
+}
+
+
+#about {
+    text-align: center;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #444d56;
+}
+
+main {
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border-top-width: 1px;
+    color: inherit;
+    height: 0
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #d1d5da;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px;
+    background-color: #0366d6;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #d1d5da;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #586069;
+}
+
+.centered-div {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            height: 50vh; /* Full height of the viewport */
+}
+
+/* Optional: constrain the image size */
+.centered-div img {
+    max-width: 50%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+a {
+/*  color: #004AAE;*/
+}
