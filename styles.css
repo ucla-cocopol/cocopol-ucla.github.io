@@ -49,41 +49,57 @@ header {
 }
 
 /* Media query for smaller screens (below 768px) */
+/* Hide the navigation by default on smaller screens */
 @media (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width for the dropdown */
+        background-color: #ffffff; /* Optional: Add background color for dropdown */
+        position: absolute; /* Ensures it overlays content */
+        top: 60px; /* Position it below the header */
+        left: 0;
+        z-index: 1;
+    }
+
+    .navigation.active {
+        display: flex; /* Show the menu when hamburger is clicked */
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+    }
+
+    /* Adjusting header layout */
     .container.header-container {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
     }
 
+    /* Hide logo and stack */
     .header-logo {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .navigation {
-        justify-content: center;
-        width: 100%; /* Ensure nav takes full width */
-    }
-
-    .navigation a {
-        font-size: 16px; /* Slightly smaller text */
+        display: none; /* Hide the logo on smaller screens */
     }
 }
 
-/* Media query for very small screens (below 480px) */
-@media (max-width: 480px) {
-    .header-logo {
-        width: 100px; /* Smaller logo for mobile */
-    }
 
-    .navigation {
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 10px; /* Smaller gap between links */
-    }
-
-    .navigation a {
-        font-size: 14px; /* Smaller font size for small screens */
-    }
+/* When the menu is active */
+.active .navigation {
+    display: flex;
+    flex-direction: column; /* Stack the links vertically */
 }
 
 .lab-name {
